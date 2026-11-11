@@ -1,1 +1,79 @@
 @import "tailwindcss";
+
+@theme {
+  /* Font Family */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Primary Brand Palette (Figma Blue) */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+
+  /* Surface & Border System (Figma Slate) */
+  --color-surface-ground: #f8fafc;
+  --color-surface-card: #ffffff;
+  --color-border-subtle: #e2e8f0;
+  --color-border-input: #cbd5e1;
+
+  /* Semantic Customer Segments (Mapped to Figma Colors) */
+  --color-segment-high: #0d9488;       /* Teal - High Value */
+  --color-segment-high-bg: #f0fdfa;
+  --color-segment-high-border: #99f6e4;
+
+  --color-segment-loyal: #2563eb;      /* Blue - Loyal */
+  --color-segment-loyal-bg: #eff6ff;
+  --color-segment-loyal-border: #bfdbfe;
+
+  --color-segment-promising: #0891b2;  /* Cyan - Promising */
+  --color-segment-promising-bg: #ecfeff;
+  --color-segment-promising-border: #a5f3fc;
+
+  --color-segment-risk: #6366f1;       /* Indigo/Purple - At Risk */
+  --color-segment-risk-bg: #eef2ff;
+  --color-segment-risk-border: #c7d2fe;
+
+  /* Shadows from Figma */
+  --shadow-card: 0px 8px 12px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0px 14px 24px rgba(15, 23, 42, 0.09);
+  --shadow-dropdown: 0px 12px 32px rgba(15, 23, 42, 0.12);
+}
+
+/* Global Base */
+html {
+  font-family: var(--font-sans);
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--color-surface-ground);
+  color: #0f172a;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Clean Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
